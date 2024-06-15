@@ -1,19 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Bem-Vindo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/txtUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="usuario"
+        android:layout_below="@id/appTitle"
+        android:layout_marginTop="40dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/black"
+        android:hintTextColor="@color/gray" />
+
+    <EditText
+        android:id="@+id/txtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        android:layout_below="@id/txtUsuario"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/black"
+        android:hintTextColor="@color/gray"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:textStyle="bold"
+        android:layout_below="@id/txtSenha"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@color/button_color"
+        android:textColor="@color/white" />
+</RelativeLayout>
